@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: edumanager
+
+  # Database Configuration
+  # Default: PostgreSQL (use Docker command below)
+  # docker run --name edupg -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=edudb -p 5432:5432 -d postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/edudb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# JWT Configuration
+jwt:
+  secret: mySecretKeyForJwtTokenGenerationMustBeLongEnough256Bits!!
+  expiration-ms: 86400000 # 24 hours in milliseconds
+
+# Logging
+logging:
+  level:
+    com.example.edumanager: DEBUG
+    org.springframework.security: DEBUG

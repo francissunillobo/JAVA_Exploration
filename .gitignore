@@ -1,0 +1,39 @@
+# Java / Maven
+*.class
+*.jar
+*.war
+*.ear
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+*.local
+
+# Build outputs
+build/
+out/
+
+# Logs
+logs/
+*.log
+
